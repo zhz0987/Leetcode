@@ -1,8 +1,15 @@
-vector<int> productExceptSelf(vector<int>& nums) 
+#include<set>
+
+bool containsDuplicate(vector<int>& nums) 
 {
-	std::vector<int> v;
-	for(auto it = nums.begin();it!=nums.end();++it)
+	std::set<int> s;
+	for (std::vector<int>::iterator i = nums.begin(); i != nums.end(); ++i)
 	{
-		
+		if(s.count(*i)==0)
+			s.insert(i);
+		else
+			return true;
 	}
+
+	return false.
 }
